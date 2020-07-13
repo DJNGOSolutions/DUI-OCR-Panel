@@ -1,0 +1,83 @@
+<template>
+  <div>
+    <v-app-bar
+      app
+      elevate-on-scroll
+      color="primary"
+      dark
+    >
+      <v-btn icon @click="drawer = true">
+        <v-icon dark>mdi-menu</v-icon>
+      </v-btn>
+      <div class="d-flex align-center">
+        <v-img
+          class="shrink mt-1 >cursor-pointer"
+          contain
+          min-width="100"
+          :src="require('@/assets/img/logo.png')"
+          width="100"
+          @click="$router.push('/')"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        text
+        class="mr-2"
+      >
+        <span>Sobre nosotros</span>
+      </v-btn>
+      <v-btn
+        href="https://github.com/DJNGOSolutions/DUI-recognition-FrontEnd/wiki"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Manual de uso</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      app
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+          @click="$router.push('/list')"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Navbar',
+  data: () => ({
+    drawer: false,
+    items: [
+      { title: 'Home', icon: 'mdi-view-dashboard' },
+      { title: 'Listado', icon: 'mdi-image' },
+      { title: 'About', icon: 'mdi-help-box' },
+    ],
+  }),
+};
+</script>
+
+<style lang="scss" scoped>
+
+</style>
