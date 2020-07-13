@@ -1,0 +1,130 @@
+body {
+    background-color: #eceff1;
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: #34495e;
+    color: #ffffff;
+    font-size: 20px;
+    height: 65px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+nav > img {
+    height: inherit;
+}
+
+nav > ul {
+    float: right;
+    letter-spacing: 1px;
+    list-style: none;
+}
+nav > ul > li {
+    display: inline-block;
+    padding: 0 1vw 0 1vw;
+}
+
+nav ul li,
+nav ul li:after,
+nav ul li:before {
+    transition: all .6s;
+}
+
+nav ul li:hover {
+    color: #41B883;
+}
+
+.app {
+    background-color: white;
+    border-radius: 5px;
+    margin: 50px;
+}
+
+.steps {
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+/*.number-circle{
+    background-color: #494949;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 14px;
+    height: 18px;
+    margin: auto;
+    margin-bottom: 0;
+    padding: 2px;
+    width: 18px;
+}*/
+
+.steps > li {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.active-step {
+    background-color: #41B883;
+    color: white;
+    border: 1px solid;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.unactive-step {
+    color: #41B883;
+    border-bottom: 1px solid #41B883;
+}
+
+#content-area {
+    background-color: white;
+    padding: 50px 50px 50px 50px;
+    position: relative;
+}
+
+.selected {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    position: inherit;
+    visibility: visible;
+}
+
+.unselected {
+    position: absolute;
+    visibility: hidden;
+}
+
+
+.buttons > button {
+    border: solid 4px white;
+    height: 60px;
+    width: 100%;
+}
+
+.active-button {
+    background-color: #41B883;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.unactive-button {
+    color: default;
+}
+
+.buttons :first-child {
+    border-right: solid 2px white;
+}
+
+.buttons :nth-child(2) {
+    border-left: solid 2px white;
+}
