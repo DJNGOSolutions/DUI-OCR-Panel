@@ -49,8 +49,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          link
-          @click="$router.push('/list')"
+          router :to="item.route"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -70,9 +69,9 @@ export default {
   data: () => ({
     drawer: false,
     items: [
-      { title: 'Home', icon: 'mdi-view-dashboard' },
-      { title: 'Listado', icon: 'mdi-image' },
-      { title: 'About', icon: 'mdi-help-box' },
+      { title: 'Home', icon: 'mdi-view-dashboard', route: '/' },
+      { title: 'Listado', icon: 'mdi-image', route: '/list' },
+      { title: 'About', icon: 'mdi-help-box', route: '/about' },
     ],
   }),
 };

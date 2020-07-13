@@ -1,80 +1,82 @@
 <template>
   <v-container>
-    <ul class="steps">
-      <li @click="selectStep(1)" :class="step1 ? 'active-step':'unactive-step'">Consideraciones</li>
-      <li @click="selectStep(2)" :class="step2 ? 'active-step':'unactive-step'">Carga la imagen</li>
-      <li @click="selectStep(3)" :class="step3 ? 'active-step':'unactive-step'">Procesando</li>
-      <li @click="selectStep(4)" :class="step4 ? 'active-step':'unactive-step'">¡Listo!</li>
-    </ul>
-    <div id="content-area">
-      <div :class="step1 ? 'selected':'unselected'">
-        <div class="step">
-          <div>
-            <ul>
-              <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
-              <li>Descarga e imprime el siguiente documento.</li>
-              <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
-              <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
-              <li>Las medidas las siguientes:</li>
+    <div class = "stepper">
+      <ul class="steps">
+        <li @click="selectStep(1)" :class="step1 ? 'active-step':'unactive-step'">Consideraciones</li>
+        <li @click="selectStep(2)" :class="step2 ? 'active-step':'unactive-step'">Carga la imagen</li>
+        <li @click="selectStep(3)" :class="step3 ? 'active-step':'unactive-step'">Procesando</li>
+        <li @click="selectStep(4)" :class="step4 ? 'active-step':'unactive-step'">¡Listo!</li>
+      </ul>
+      <div id="content-area">
+        <div :class="step1 ? 'selected':'unselected'">
+          <div class="step">
+            <div>
               <ul>
-                <li>Medidas externa:</li>
-                <li>Medidas internas:</li>
+                <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
+                <li>Descarga e imprime el siguiente documento.</li>
+                <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
+                <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
+                <li>Las medidas las siguientes:</li>
+                <ul>
+                  <li>Medidas externa:</li>
+                  <li>Medidas internas:</li>
+                </ul>
+                <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
               </ul>
-              <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
-            </ul>
+            </div>
+            <img src="@/assets/img/Step1.png">
           </div>
-          <img src="@/assets/img/Step1.png">
         </div>
-      </div>
-      <div :class="step2 ? 'selected':'unselected'">
-        <div class="step">
-          <div>
+        <div :class="step2 ? 'selected':'unselected'">
+          <div class="step">
+            <div>
+            </div>
+            <img src="@/assets/img/Step2.png">
           </div>
-          <img src="@/assets/img/Step2.png">
         </div>
-      </div>
-      <div :class="step3 ? 'selected':'unselected'">
-        <div class="step">
-          <div>
-            <ul>
-              <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
-              <li>Descarga e imprime el siguiente documento.</li>
-              <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
-              <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
-              <li>Las medidas las siguientes:</li>
+        <div :class="step3 ? 'selected':'unselected'">
+          <div class="step">
+            <div>
               <ul>
-                <li>Medidas externa:</li>
-                <li>Medidas internas:</li>
+                <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
+                <li>Descarga e imprime el siguiente documento.</li>
+                <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
+                <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
+                <li>Las medidas las siguientes:</li>
+                <ul>
+                  <li>Medidas externa:</li>
+                  <li>Medidas internas:</li>
+                </ul>
+                <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
               </ul>
-              <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
-            </ul>
+            </div>
+            <img src="@/assets/img/Step3.png">
           </div>
-          <img src="@/assets/img/Step3.png">
         </div>
-      </div>
-      <div :class="step4 ? 'selected':'unselected'">
-        <div class="step">
-          <div>
-            <ul>
-              <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
-              <li>Descarga e imprime el siguiente documento.</li>
-              <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
-              <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
-              <li>Las medidas las siguientes:</li>
+        <div :class="step4 ? 'selected':'unselected'">
+          <div class="step">
+            <div>
               <ul>
-                <li>Medidas externa:</li>
-                <li>Medidas internas:</li>
+                <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
+                <li>Descarga e imprime el siguiente documento.</li>
+                <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
+                <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
+                <li>Las medidas las siguientes:</li>
+                <ul>
+                  <li>Medidas externa:</li>
+                  <li>Medidas internas:</li>
+                </ul>
+                <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
               </ul>
-              <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
-            </ul>
+            </div>
+            <img src="@/assets/img/Step4.png">
           </div>
-          <img src="@/assets/img/Step4.png">
         </div>
       </div>
-    </div>
-    <div class="buttons">
-      <button @click="clickPrevious" :class="step1 ? 'unactive-button':'active-button'">PREVIOUS</button>
-      <button @click="clickNext" :class="step4 ? 'unactive-button':'active-button'">NEXT</button>
+      <div class="buttons">
+        <button @click="clickPrevious" :class="step1 ? 'unactive-button':'active-button'">PREVIOUS</button>
+        <button @click="clickNext" :class="step4 ? 'unactive-button':'active-button'">NEXT</button>
+      </div>
     </div>
   </v-container>
 </template>
@@ -134,6 +136,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+  button {
+    outline: none;
+  }
 </style>
