@@ -30,7 +30,7 @@
         <div class="step">
           <div>
           </div>
-          <img src="assets/images/Step2.png">
+          <img src="@/assets/img/Step2.png">
         </div>
       </div>
       <div :class="step3 ? 'selected':'unselected'">
@@ -49,7 +49,7 @@
               <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
             </ul>
           </div>
-          <img src="assets/images/Step3.png">
+          <img src="@/assets/img/Step3.png">
         </div>
       </div>
       <div :class="step4 ? 'selected':'unselected'">
@@ -68,7 +68,7 @@
               <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
             </ul>
           </div>
-          <img src="assets/images/Step4.png">
+          <img src="@/assets/img/Step4.png">
         </div>
       </div>
     </div>
