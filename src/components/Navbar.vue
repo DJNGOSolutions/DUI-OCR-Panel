@@ -34,7 +34,7 @@
         text
       >
         <span class="mr-2">Manual de uso</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <!--<v-icon>mdi-open-in-new</v-icon>-->
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer
@@ -78,5 +78,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  span {
+    font-family: Lato;
+  }
 </style>

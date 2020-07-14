@@ -34,7 +34,7 @@ export default {
     usersList: [
       {
         id: 1,
-        dui: '05695779-2',
+        dui: '12345678-1',
         firstName: 'Rodrigo Alejandro',
         lastName: 'Alvarenga Pérez',
         gender: 'M',
@@ -48,7 +48,7 @@ export default {
       },
       {
         id: 2,
-        dui: '05610209-6',
+        dui: '87654321-2',
         firstName: 'Marcelo Alexander',
         lastName: 'Martínez Montenegro',
         gender: 'M',
