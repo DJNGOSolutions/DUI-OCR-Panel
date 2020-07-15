@@ -1,4 +1,4 @@
-# dui-ocr
+# DUI-OCR
 
 ## Project setup
 ```
