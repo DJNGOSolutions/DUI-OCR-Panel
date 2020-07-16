@@ -1,6 +1,6 @@
 body {
     background-color: #eceff1;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato;
 }
 
 nav {
@@ -36,18 +36,25 @@ nav ul li:hover {
     color: #41B883;
 }
 
-.app {
-    background-color: white;
+#app {
+    background-color: #eceff1;
     border-radius: 5px;
-    margin: 50px;
+    padding: 50px;
+    padding-bottom: 0;
+}
+
+.stepper {
+    background-color: white;
+}
+
+.v-application ul, .v-application ol {
+    padding-left: 0px;
 }
 
 .steps {
     cursor: pointer;
     list-style: none;
-    margin: 0;
     text-align: center;
-    padding: 0;
 }
 
 .steps > li {
@@ -91,6 +98,42 @@ nav ul li:hover {
     visibility: hidden;
 }
 
+.step > div {
+    align-items: center;
+    justify-items: center;
+}
+
+.loader-title{
+    color: #34495e;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.inputfile {
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0.1px;
+    z-index: -4;
+}
+
+.inputfile + label {
+    background-color: #41B883;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 8px 15px;
+}
+
+.inputfile:focus + label {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+    pointer-events: none;
+}
 
 .buttons > button {
     border: solid 4px white;
@@ -107,6 +150,7 @@ nav ul li:hover {
 
 .unactive-button {
     color: default;
+    cursor: default;
 }
 
 .buttons :first-child {

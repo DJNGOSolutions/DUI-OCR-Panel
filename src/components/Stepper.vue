@@ -12,16 +12,10 @@
           <div class="step">
             <div>
               <ul>
-                <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
-                <li>Descarga e imprime el siguiente documento.</li>
-                <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
-                <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
-                <li>Las medidas las siguientes:</li>
-                <ul>
-                  <li>Medidas externa:</li>
-                  <li>Medidas internas:</li>
-                </ul>
-                <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
+                <li>1. Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
+                <li>2. Toma una página de papel y con plumón grueso delinea los bordes de tu DUI en la página y toma la foto de tu DUI posicionado en la silueta que acabas de formar.</li>
+                <li>3. Toma la foto de modo que el efecto producido por las tiras reflectivas de tu DUI no sean visibles.</li>
+                <li>4. Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
               </ul>
             </div>
             <img src="@/assets/img/Step1.png">
@@ -29,7 +23,10 @@
         </div>
         <div :class="step2 ? 'selected':'unselected'">
           <div class="step">
-            <div>
+            <div class=">flex >flex-col">
+              <p class="loader-title">Carga aquí la imagen de tu DUI</p>
+              <input type="file" class="inputfile" name="file" @change="onFileSelected" ref="fileInput">
+              <label for="file" @click="$refs.fileInput.click()">CHOOSE YOUR FILES</label>
             </div>
             <img src="@/assets/img/Step2.png">
           </div>
@@ -37,18 +34,7 @@
         <div :class="step3 ? 'selected':'unselected'">
           <div class="step">
             <div>
-              <ul>
-                <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
-                <li>Descarga e imprime el siguiente documento.</li>
-                <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
-                <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
-                <li>Las medidas las siguientes:</li>
-                <ul>
-                  <li>Medidas externa:</li>
-                  <li>Medidas internas:</li>
-                </ul>
-                <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
-              </ul>
+              <p>El resultado del OCR fue el siguiente, siente en la libertad de hacer los ajustes que creas necesarios:</p>
             </div>
             <img src="@/assets/img/Step3.png">
           </div>
@@ -56,18 +42,7 @@
         <div :class="step4 ? 'selected':'unselected'">
           <div class="step">
             <div>
-              <ul>
-                <li>Las imágenes que subas deben de estar guardadas en uno de los siguientes formatos: JPG, JPEG o PNG.</li>
-                <li>Descarga e imprime el siguiente documento.</li>
-                <li>Toma la foto de modo que solo sea visible la parte negra alrededor del DUI.</li>
-                <li>Si no te es posible imprimir el documento puedes hacerlo por tu cuenta.</li>
-                <li>Las medidas las siguientes:</li>
-                <ul>
-                  <li>Medidas externa:</li>
-                  <li>Medidas internas:</li>
-                </ul>
-                <li>Asegurate que la resolución de la imagen permita entender con facilidad el contenido de esta.</li>
-              </ul>
+              <p>¡Tu resultado ya ha sido almacenado en la base de datos!</p>
             </div>
             <img src="@/assets/img/Step4.png">
           </div>
@@ -89,6 +64,7 @@ export default {
     step2: false,
     step3: false,
     step4: false,
+    selectedFile: null,
   }),
   methods: {
     selectStep(numberStep) {
@@ -131,6 +107,11 @@ export default {
         this.step2 = false;
         this.step1 = true;
       }
+    },
+
+    onFileSelected(event) {
+      const [b] = event.target.files;
+      this.selectedFile = b;
     },
   },
 };

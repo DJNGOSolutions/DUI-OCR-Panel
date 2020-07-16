@@ -5,9 +5,10 @@
 
 .step {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 65% 35%;
     justify-items: center;
     align-items: center;
+    text-align: justify;
 }
 
 .buttons {
