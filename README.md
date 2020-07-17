@@ -2,6 +2,10 @@
 
 Este repositorio contiene una Web App que facilita el manejo del envío de archivos y la recepción de datos de un OCR, en este caso esta orientado a DUIs, cuyos caracteres son reconocidos por un programa Python que utiliza _OpenCV_ y _Tesseract_; y maneja una base de datos dummy.
 
+## Repositorios asociados
+- OCR: https://github.com/DJNGOSolutions/simple-ocr-opencv/tree/master
+- Despliegue de RESTful API: https://github.com/DJNGOSolutions/PostgREST-DUI_API
+
 ## Procesamientos realizados del proyecto
 El proyecto se divide en dos procesamientos principalmente.
 1. El envío de imágenes para el escaneo de DUIs y recepción de los caracteres reconocidos en las imágenes.
