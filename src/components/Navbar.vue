@@ -23,6 +23,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
+        to="/about"
         text
         class="mr-2"
       >
