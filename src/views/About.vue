@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <v-container class="about">
     <div class="about-container">
       <div class="titulo">
         <span>Tecnologías utilizadas</span>
@@ -37,7 +37,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <style scoped>
