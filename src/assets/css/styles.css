@@ -140,7 +140,7 @@ nav ul li:hover {
     pointer-events: none;
 }
 
-.editing > input{
+.editing > label > input{
     background-color: #eceff1;
     border: solid 0.5px #34495e;
     color: #34495e;
@@ -192,7 +192,7 @@ nav ul li:hover {
 .about-container > .titulo {
     background-color: #41B883;
     color: white;
-    padding: 12px;   
+    padding: 12px;
     width: 100%;
 }
 
