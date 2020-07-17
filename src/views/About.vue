@@ -8,7 +8,7 @@
         <li>
           <div>
             Reconocimiento de caracteres de imágenes
-            <div class="ocr-images1">
+            <div class="ocr-images">
               <a href="https://opencv.org/"><img src="@/assets/img/OpenCV.png"></a>
               <a href="https://www.python.org/"><img src="@/assets/img/Python.png"></a>
               <a href="https://opensource.google/projects/tesseract"><img src="@/assets/img/Tesseract.png"></a>
@@ -18,7 +18,7 @@
         <li>
           <div>
             Aplicación web
-            <div class="ocr-images2">
+            <div class="ocr-images">
               <span></span>
               <a href="https://vuejs.org/"><img src="@/assets/img/Vue.png"></a>
               <span></span>
@@ -28,7 +28,7 @@
         <li>
           <div>
             Base de datos
-            <div class="ocr-images3">
+            <div class="ocr-images">
               <span></span>
               <a href="https://www.postgresql.org/"><img src="@/assets/img/PostgreSQL.png"></a>
               <span></span>

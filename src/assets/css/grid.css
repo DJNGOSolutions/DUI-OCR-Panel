@@ -16,23 +16,15 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.ocr-images1{
+.ocr-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
 }
 
-.ocr-images2{
+.editing {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-}
-
-.ocr-images3{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr);
 }

@@ -4,7 +4,7 @@
       <ul class="steps">
         <li @click="selectStep(1)" :class="step1 ? 'active-step':'unactive-step'">Consideraciones</li>
         <li @click="selectStep(2)" :class="step2 ? 'active-step':'unactive-step'">Carga la imagen</li>
-        <li @click="selectStep(3)" :class="step3 ? 'active-step':'unactive-step'">Procesando</li>
+        <li @click="selectStep(3)" :class="step3 ? 'active-step':'unactive-step'">Corrección</li>
         <li @click="selectStep(4)" :class="step4 ? 'active-step':'unactive-step'">¡Listo!</li>
       </ul>
       <div id="content-area">
@@ -32,9 +32,33 @@
           </div>
         </div>
         <div :class="step3 ? 'selected':'unselected'">
-          <div class="step">
+          <div class="step step3">
             <div>
-              <p>El resultado del OCR fue el siguiente, siente en la libertad de hacer los ajustes que creas necesarios:</p>
+              <p>El resultado del OCR fue el siguiente, siente en la libertad de hacer los ajustes que creas necesarios.</p>
+              <p><b>Nota:</b> Una vez de click en el botón <i>SIGUIENTE</i> estará aceptando guardar estos datos en la base de datos.</p>
+              <div class="editing">
+                <input type="text" placeholder="Apellidos">
+                <input type="text" placeholder="Nombres">
+                <input type="text" placeholder="Género">
+                <input type="text" placeholder="Salvadoreño por">
+                <input type="text" placeholder="Fecha de nacimiento">
+                <input type="text" placeholder="Lugar de nacimiento">
+                <input type="text" placeholder="Fecha de expedición">
+                <input type="text" placeholder="Lugar de expedición">
+                <input type="text" placeholder="Fecha de expiración">
+                <input type="text" placeholder="Número de DUI">
+                <input type="text" placeholder="Lugar de residencia">
+                <input type="text" placeholder="Trámite">
+                <input type="text" placeholder="Municipio">
+                <input type="text" placeholder="Departamento">
+                <input type="text" placeholder="Código de zona">
+                <input type="text" placeholder="Nombre de la madre">
+                <input type="text" placeholder="Nombre del padre">
+                <input type="text" placeholder="Nombre del cónyuge">
+                <input type="text" placeholder="Estado familiar">
+                <input type="text" placeholder="Tipo de sangre">
+                <input type="text" placeholder="Profesión">
+              </div>
             </div>
             <img src="@/assets/img/Step3.png">
           </div>
@@ -49,8 +73,8 @@
         </div>
       </div>
       <div class="buttons">
-        <button @click="clickPrevious" :class="step1 ? 'unactive-button':'active-button'">PREVIOUS</button>
-        <button @click="clickNext" :class="step4 ? 'unactive-button':'active-button'">NEXT</button>
+        <button @click="clickPrevious" :class="step1 ? 'unactive-button':'active-button'">ANTERIOR</button>
+        <button @click="clickNext" :class="step4 ? 'unactive-button':'active-button'">SIGUIENTE</button>
       </div>
     </div>
   </v-container>

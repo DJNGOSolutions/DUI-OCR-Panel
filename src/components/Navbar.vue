@@ -29,7 +29,7 @@
         <span>Sobre nosotros</span>
       </v-btn>
       <v-btn
-        href="https://github.com/DJNGOSolutions/DUI-recognition-FrontEnd/wiki"
+        href="https://github.com/DJNGOSolutions/DUI-OCR-Panel"
         target="_blank"
         text
       >
