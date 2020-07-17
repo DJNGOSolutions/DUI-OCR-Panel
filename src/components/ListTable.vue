@@ -5,8 +5,11 @@
         :headers="headers"
         :items="users"
       >
-        <template v-slot:item.open>
-          <v-btn icon>
+        <template v-slot:item.open="{ item }">
+          <v-btn
+            :to="{ path: `/user/${item.open}` }"
+            icon
+          >
             <v-icon>mdi-eye</v-icon>
           </v-btn>
         </template>
@@ -16,22 +19,27 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'ListTable',
   data: () => ({
     headers: [
       {
-        text: 'ID', align: 'start', filterable: false, value: 'id',
+        text: 'Id', align: 'start', filterable: false, value: 'id_dui',
       },
-      { text: 'DUI', value: 'dui' },
+      {
+        text: 'DUI', value: 'numero_dui',
+      },
       { text: 'Nombre', value: 'displayName' },
       { text: 'Apellido', value: 'displayLastName' },
-      { text: 'Género', value: 'gender' },
-      { text: 'Edad', value: 'age' },
-      { text: 'Departamento', value: 'department' },
+      { text: 'Género', value: 'genero' },
+      { text: 'Edad', value: 'edad' },
+      { text: 'Departamento', value: 'departamento' },
       { text: '', value: 'open' },
     ],
-    usersList: [
+    usersList: [],
+    usersList2: [
       {
         id: 1,
         dui: '12345678-1',
@@ -62,17 +70,25 @@ export default {
       },
     ],
   }),
+  async mounted() {
+    try {
+      const { data } = await axios.get('https://dui-api.herokuapp.com/dui');
+      this.usersList = data;
+    } catch (e) {
+      console.log(e);
+    }
+  },
   computed: {
     users() {
       return this.usersList.map((user) => {
         const parsedUser = {
           ...user,
         };
-        const parsedDate = this.parseDate(user.birthDate);
-        Reflect.set(parsedUser, 'age', this.calculateBirth(parsedDate));
-        Reflect.set(parsedUser, 'displayName', user.firstName.split(' ')[0]);
-        Reflect.set(parsedUser, 'displayLastName', user.lastName.split(' ')[0]);
-        Reflect.set(parsedUser, 'open', user.id);
+        const parsedDate = this.parseDate(user.fecha_nacimiento);
+        Reflect.set(parsedUser, 'edad', this.calculateBirth(parsedDate));
+        Reflect.set(parsedUser, 'displayName', user.nombres.split(' ')[0]);
+        Reflect.set(parsedUser, 'displayLastName', user.apellidos.split(' ')[0]);
+        Reflect.set(parsedUser, 'open', user.id_dui);
         return parsedUser;
       });
     },
